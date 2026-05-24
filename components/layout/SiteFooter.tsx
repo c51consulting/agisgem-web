@@ -45,8 +45,8 @@ export function SiteFooter() {
           <div className="text-[color:var(--ink)] font-medium mb-3">Contact</div>
           <ul className="space-y-2 text-[color:var(--muted)]">
             <li>
-              <a href="mailto:rwa@realmgroup.global" className="break-all hover:text-[color:var(--accent)]">
-                rwa@realmgroup.global
+              <a href="mailto:realm360@realmgroup.global" className="break-all hover:text-[color:var(--accent)]">
+                realm360@realmgroup.global
               </a>
             </li>
             <li>
