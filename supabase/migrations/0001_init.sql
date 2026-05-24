@@ -1,0 +1,2 @@
+-- Identical to /supabase/schema.sql — kept here for Supabase CLI migrations workflow.
+-- See ../schema.sql for the canonical SQL.
