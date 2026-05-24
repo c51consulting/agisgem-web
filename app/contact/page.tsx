@@ -8,10 +8,21 @@ type LeadType = "pilot" | "investor" | "partner" | "community";
 export default function ContactPage({
   searchParams
 }: {
-  searchParams?: { type?: string };
+  searchParams?: { type?: string; audience?: string };
 }) {
   const allowed: LeadType[] = ["pilot", "investor", "partner", "community"];
-  const raw = (searchParams?.type as LeadType) || "pilot";
+
+  // Map audience hint from the homepage Audiences section to a lead type.
+  const audienceMap: Record<string, LeadType> = {
+    lender: "partner",
+    platform: "partner",
+    operator: "pilot",
+    investor: "investor"
+  };
+  const audienceParam = searchParams?.audience?.toLowerCase();
+  const audienceDefault = audienceParam ? audienceMap[audienceParam] : undefined;
+
+  const raw = (searchParams?.type as LeadType) || audienceDefault || "pilot";
   const defaultType: LeadType = allowed.includes(raw) ? raw : "pilot";
 
   return (

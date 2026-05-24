@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Activity } from "lucide-react";
 
 export function Hero() {
   return (
@@ -28,24 +28,42 @@ export function Hero() {
           <Link href="/platform" className="btn-secondary">
             View verification model
           </Link>
+          <Link href="/developers" className="btn-secondary">
+            Developers
+          </Link>
         </div>
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
           {[
-            { label: "Agricultural RWAs", value: "Livestock · Carbon · Commodities" },
-            { label: "Chain", value: "Base · Virtuals Protocol" },
-            { label: "Verification surface", value: "NLIS · Weight · Sale · Carbon" },
-            { label: "Output", value: "Logic Score + IPFS Proof" }
+            { value: "001", label: "Pilot in design", sub: "Northern AU livestock" },
+            { value: "v0.1", label: "Methodology", sub: "Logic Score model" },
+            { value: "4", label: "Verification surfaces", sub: "NLIS · Weight · Sale · Carbon" },
+            { value: "Base", label: "Anchor chain", sub: "via Virtuals Protocol" }
           ].map((s) => (
-            <div key={s.label} className="card p-4">
-              <div className="text-[11px] uppercase tracking-wider text-[color:var(--muted)]">
+            <div key={s.label} className="card p-4 relative overflow-hidden">
+              <div className="absolute top-3 right-3 flex items-center gap-1 text-[10px] uppercase tracking-wider text-[color:var(--accent)]">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[color:var(--accent)] opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[color:var(--accent)]" />
+                </span>
+                live
+              </div>
+              <div className="text-2xl font-semibold text-[color:var(--ink)] leading-none">
+                {s.value}
+              </div>
+              <div className="mt-2 text-[11px] uppercase tracking-wider text-[color:var(--muted)]">
                 {s.label}
               </div>
-              <div className="mt-1 text-sm text-[color:var(--ink)] font-medium leading-snug">
-                {s.value}
+              <div className="mt-1 text-xs text-[color:var(--ink)]/80 leading-snug">
+                {s.sub}
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-6 flex items-center gap-2 text-xs text-[color:var(--muted)]">
+          <Activity size={14} className="text-[color:var(--accent)]" />
+          Verification log streaming below — data shown is from Pilot #001 in design.
         </div>
       </div>
     </section>
