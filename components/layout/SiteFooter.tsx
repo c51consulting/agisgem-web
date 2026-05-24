@@ -42,12 +42,21 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <div className="text-[color:var(--ink)] font-medium mb-3">Company</div>
+          <div className="text-[color:var(--ink)] font-medium mb-3">Contact</div>
           <ul className="space-y-2 text-[color:var(--muted)]">
+            <li>
+              <a href="mailto:rwa@realmgroup.global" className="break-all hover:text-[color:var(--accent)]">
+                rwa@realmgroup.global
+              </a>
+            </li>
+            <li>
+              <a href="tel:+61478834818" className="hover:text-[color:var(--accent)]">
+                +61 478 834 818
+              </a>
+            </li>
+            <li><Link href="/contact">Request a pilot</Link></li>
+            <li><Link href="/contact?type=investor">Investor interest</Link></li>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/contact?type=investor">Investor Interest</Link></li>
-            <li><Link href="/contact?type=partner">Partnerships</Link></li>
           </ul>
         </div>
       </div>

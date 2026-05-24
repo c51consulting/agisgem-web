@@ -27,9 +27,15 @@ export default function ContactPage({
         </div>
         <aside className="space-y-4">
           <div className="card p-5">
-            <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">Direct</div>
-            <a href="mailto:hello@agisgem.io" className="font-medium text-[color:var(--accent)]">
-              hello@agisgem.io
+            <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">Email</div>
+            <a href="mailto:rwa@realmgroup.global" className="font-medium text-[color:var(--accent)] break-all">
+              rwa@realmgroup.global
+            </a>
+          </div>
+          <div className="card p-5">
+            <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">Phone</div>
+            <a href="tel:+61478834818" className="font-medium text-[color:var(--accent)]">
+              +61 478 834 818
             </a>
           </div>
           <div className="card p-5">
