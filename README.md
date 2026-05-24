@@ -32,9 +32,10 @@ Open http://localhost:3000.
 | Key | Where | Used by |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SUPABASE_URL` | Vercel + `.env.local` | Browser + server |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Vercel + `.env.local` | Browser |
-| `SUPABASE_SERVICE_ROLE_KEY` | Vercel (server only) | `/api/lead`, `/proof` SSR |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Vercel + `.env.local` | Browser + server |
 | `NEXT_PUBLIC_SITE_URL` | Vercel | Open Graph + canonical |
+
+The service-role key is intentionally not used. `leads` accepts constrained INSERTs from the anon role; `proof_logs` exposes only rows where `status = 'published'`. See `supabase/migrations/0002_allow_anon_lead_inserts.sql`.
 
 ## Supabase setup
 

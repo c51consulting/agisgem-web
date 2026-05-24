@@ -33,7 +33,6 @@ export async function POST(req: Request) {
 
   const supabase = getSupabaseServerClient();
   if (!supabase) {
-    // Supabase not configured yet — accept the lead but flag it.
     console.warn("[lead] supabase not configured; lead not persisted", { type, email });
     return NextResponse.json({ ok: true, persisted: false });
   }
