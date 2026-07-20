@@ -5,19 +5,19 @@ const steps = [
     icon: Database,
     title: "Ingest",
     body:
-      "Pull structured signals from NLIS records, weight & health data, sale yards, carbon registries, and commodity rails. Schema-normalised, audit-ready."
+      "Start with customer-supplied contracts, entity records and asset evidence. Approved registry and marketplace connections are added only after access, testing and legal review."
   },
   {
     icon: ScanSearch,
     title: "Verify",
     body:
-      "Run the AGIsGEM G.A.M.E. framework: Perception → Cognitive Auditor → Action Layer. Output: a Logic Score with risk flags and confidence intervals."
+      "Apply the AGIsGEM G.A.M.E. framework to organise evidence, identify gaps and produce explainable risk flags and a preliminary Logic Score."
   },
   {
     icon: GitBranch,
     title: "Operationalize",
     body:
-      "Anchor proofs to IPFS, reference them on-chain, and pipe outputs to lenders, insurers, marketplaces, and tokenization platforms via API."
+      "Issue a versioned PDF and JSON report with a unique report ID. Hashing, IPFS and API delivery are introduced as each pilot capability is tested."
   }
 ];
 
@@ -28,7 +28,7 @@ export function Platform() {
         <div className="max-w-2xl">
           <div className="pill mb-4">The Platform</div>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
-            From off-chain reality to on-chain proof — in three stages.
+            From supplied evidence to a reviewable report — in three stages.
           </h2>
         </div>
         <div className="mt-12 grid md:grid-cols-3 gap-4">

@@ -6,7 +6,7 @@ type Entry = {
   pilot: string;
   surface: string;
   event: string;
-  status: "verified" | "queued" | "anchored";
+  status: "planned" | "in design" | "pending agreement";
 };
 
 const entries: Entry[] = [
@@ -14,43 +14,43 @@ const entries: Entry[] = [
     time: "2026-05-22",
     pilot: "Pilot #001",
     surface: "Methodology",
-    event: "Logic Score v0.1 published to operator review",
-    status: "verified"
+    event: "Draft Logic Score methodology prepared for adviser and operator review",
+    status: "in design"
   },
   {
     time: "2026-05-18",
     pilot: "Pilot #001",
     surface: "NLIS",
-    event: "Herd identifier mapping schema accepted",
-    status: "verified"
+    event: "Proposed livestock evidence schema documented; data access not yet connected",
+    status: "planned"
   },
   {
     time: "2026-05-14",
     pilot: "Pilot #001",
     surface: "Weight",
-    event: "Reference dataset ingested — 412 records",
-    status: "anchored"
+    event: "Sample output structure specified; production dataset not yet ingested",
+    status: "planned"
   },
   {
     time: "2026-05-09",
     pilot: "Pilot #001",
     surface: "Carbon",
     event: "Boundary file under co-design with operator",
-    status: "queued"
+    status: "planned"
   },
   {
     time: "2026-05-02",
     pilot: "Pilot #001",
     surface: "Sale",
-    event: "Saleyard data feed handshake confirmed",
-    status: "verified"
+    event: "Founding commercial pilot scope prepared for execution",
+    status: "pending agreement"
   }
 ];
 
 const statusStyle: Record<Entry["status"], string> = {
-  verified: "text-[color:var(--accent)] border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10",
-  anchored: "text-[#c9a96e] border-[#c9a96e]/40 bg-[#c9a96e]/10",
-  queued: "text-[color:var(--muted)] border-[color:var(--border)] bg-transparent"
+  planned: "text-[color:var(--muted)] border-[color:var(--border)] bg-transparent",
+  "in design": "text-[#c9a96e] border-[#c9a96e]/40 bg-[#c9a96e]/10",
+  "pending agreement": "text-[color:var(--accent)] border-[color:var(--accent)]/40 bg-[color:var(--accent)]/10"
 };
 
 export function VerificationLog() {
@@ -60,15 +60,14 @@ export function VerificationLog() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div className="max-w-2xl">
             <div className="text-[11px] uppercase tracking-widest text-[color:var(--accent)]">
-              Verification log · Live
+              Pilot build log · Current status
             </div>
             <h2 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">
-              Every Logic Score, every proof, traceable.
+              Show the work. Label the status.
             </h2>
             <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
-              This is the same kind of feed institutional investors expect from oracles like Pyth and Chainlink —
-              adapted for physical, ag-native assets. Pilot #001 is in active design; entries below are from the
-              live working ledger.
+              Pilot #001 remains in controlled design and commercial activation. These entries are a
+              transparent delivery register—not proof of completed registry integrations or production audits.
             </p>
           </div>
           <Link

@@ -10,13 +10,14 @@ export function SiteFooter() {
             AGIsGEM
           </div>
           <p className="text-[color:var(--muted)] leading-relaxed">
-            The intelligence layer for real-world assets. Built by REALM360 Intelligence on Virtuals Protocol.
+            AI-assisted evidence and risk scoring for agricultural real-world assets. Founding commercial pilot.
           </p>
         </div>
         <div>
           <div className="text-[color:var(--ink)] font-medium mb-3">Product</div>
           <ul className="space-y-2 text-[color:var(--muted)]">
             <li><Link href="/platform">Platform</Link></li>
+            <li><Link href="/services">Services & Pricing</Link></li>
             <li><Link href="/use-cases">Use Cases</Link></li>
             <li><Link href="/proof">Proof Logs</Link></li>
             <li><Link href="/developers">Developers</Link></li>
@@ -27,7 +28,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-[color:var(--muted)]">
             <li><Link href="/token">Token & Virtuals</Link></li>
             <li>
-              <a href="https://app.virtuals.io/prototypes/0xf5ae0Ac5Ee87f3aA80984AD2de18de5CBc0b7395" target="_blank" rel="noreferrer">
+              <a href="https://app.virtuals.io/virtuals/42445" target="_blank" rel="noreferrer">
                 Virtuals Listing
               </a>
             </li>

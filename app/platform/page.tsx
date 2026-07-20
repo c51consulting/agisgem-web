@@ -8,16 +8,16 @@ export default function PlatformPage() {
       <PageHeader
         eyebrow="Platform"
         title="The AGIsGEM verification engine."
-        description="AGIsGEM combines real-world data ingestion, verification logic, and audit-friendly proof outputs so tokenization platforms, lenders, and marketplaces can make better decisions faster."
+        description="AGIsGEM is building a controlled workflow for organising supplied agricultural evidence, identifying gaps and producing explainable, versioned decision-support reports."
       />
       <section className="container-x py-16 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 prose-light">
           <h2>Data ingestion layer</h2>
           <p>
-            AGIsGEM ingests structured signals from the systems already governing real-world assets — NLIS
-            cattle records, sale yard data, weight & health histories, commodity reference rails, carbon
-            registries, and counterparty disclosures. Sources are schema-normalised, timestamped, and
-            stored alongside their provenance so every downstream score is traceable to its inputs.
+            The founding pilot begins with customer-supplied contracts, entity records, asset schedules and
+            operational evidence. Approved registry, saleyard, carbon and marketplace connections will be
+            introduced only after access, testing and legal review. Each report states which sources were
+            supplied, independently checked or not available.
           </p>
           <h2>Verification engine — the G.A.M.E. framework</h2>
           <p>
@@ -37,16 +37,16 @@ export default function PlatformPage() {
           </p>
           <h2>Proof anchoring</h2>
           <p>
-            Final reports are hashed and pinned to IPFS. The hash is referenced in an on-chain memo on
-            Base so any counterparty can independently verify the report has not been altered since
-            publication.
+            The target workflow hashes final reports and may pin approved artefacts to IPFS and reference
+            them on Base. Until this capability is tested on an issued pilot report, it remains a planned
+            proof layer rather than a live verification claim.
           </p>
           <h2>Outputs</h2>
           <ul>
             <li>Logic Score PDF + machine-readable JSON</li>
-            <li>IPFS hash and on-chain transaction reference</li>
-            <li>API endpoints for lenders, insurers, and marketplaces</li>
-            <li>Verification Log entry on agisgem.io/proof</li>
+            <li>Unique report ID and version history</li>
+            <li>Optional hash, IPFS and API outputs as each capability is commissioned and tested</li>
+            <li>Public status entry for badges approved for publication</li>
           </ul>
         </div>
         <aside className="space-y-4">
@@ -60,13 +60,13 @@ export default function PlatformPage() {
             <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">
               First asset class
             </div>
-            <div className="font-medium">Australian livestock contracts (NLIS-anchored).</div>
+            <div className="font-medium">Australian livestock contracts; NLIS evidence subject to authorised access.</div>
           </div>
           <div className="card p-5">
             <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">
               Anchoring
             </div>
-            <div className="font-medium">IPFS + Base on-chain memo.</div>
+            <div className="font-medium">Planned: report hash, IPFS + Base reference.</div>
           </div>
         </aside>
       </section>

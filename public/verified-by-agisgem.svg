@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="96" viewBox="0 0 360 96" role="img" aria-labelledby="title desc">
+  <title id="title">Verified by AGIsGEM</title>
+  <desc id="desc">AGIsGEM validation badge. Valid only when linked to a current AGIsGEM report record.</desc>
+  <rect x="1" y="1" width="358" height="94" rx="14" fill="#101510" stroke="#7dd35f" stroke-width="2"/>
+  <circle cx="48" cy="48" r="25" fill="#172317" stroke="#7dd35f" stroke-width="2"/>
+  <path d="M36 48.5l8 8 17-19" fill="none" stroke="#7dd35f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="86" y="33" fill="#8aa085" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">VALIDATION MARK</text>
+  <text x="86" y="57" fill="#e8efe2" font-family="Arial, sans-serif" font-size="20" font-weight="700">Verified by AGIsGEM</text>
+  <text x="86" y="76" fill="#7dd35f" font-family="Arial, sans-serif" font-size="10">CHECK THE LINKED REPORT ID AND CURRENT STATUS</text>
+</svg>

@@ -30,7 +30,7 @@ export default function ContactPage({
       <PageHeader
         eyebrow="Contact"
         title="Let's verify something real."
-        description="Tell us what you're trying to verify. We respond personally — no marketing automation, no chatbots."
+        description="Tell us the asset, contract or decision you need assessed. Paid pilots begin with written scope, authorised evidence access and cleared payment."
       />
       <section className="container-x py-16 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2">
@@ -58,7 +58,7 @@ export default function ContactPage({
           <div className="card p-5">
             <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">Virtuals</div>
             <a
-              href="https://app.virtuals.io/prototypes/0xf5ae0Ac5Ee87f3aA80984AD2de18de5CBc0b7395"
+              href="https://app.virtuals.io/virtuals/42445"
               target="_blank"
               rel="noreferrer"
               className="font-medium text-[color:var(--accent)]"

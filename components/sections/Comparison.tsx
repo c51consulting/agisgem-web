@@ -12,12 +12,12 @@ type Row = {
 
 const rows: Row[] = [
   { capability: "Native to physical, ag-anchored RWAs", agisgem: "yes", general: "no", custodial: "partial" },
-  { capability: "Multi-surface verification (NLIS · weight · sale · carbon)", agisgem: "yes", general: "no", custodial: "no" },
+  { capability: "Agricultural multi-evidence workflow (pilot)", agisgem: "partial", general: "no", custodial: "partial" },
   { capability: "Single Logic Score as a decision object", agisgem: "yes", general: "no", custodial: "no" },
-  { capability: "Evidence anchored to IPFS for re-verification", agisgem: "yes", general: "partial", custodial: "no" },
-  { capability: "Oracle-style API + agent surface", agisgem: "yes", general: "yes", custodial: "no" },
+  { capability: "Evidence hashing / IPFS anchoring", agisgem: "partial", general: "partial", custodial: "partial" },
+  { capability: "Oracle-style API + agent surface", agisgem: "partial", general: "yes", custodial: "partial" },
   { capability: "Co-design with the asset operator", agisgem: "yes", general: "no", custodial: "partial" },
-  { capability: "On-chain settlement (Base · Virtuals)", agisgem: "yes", general: "yes", custodial: "no" }
+  { capability: "Virtuals agent token on Base", agisgem: "yes", general: "partial", custodial: "no" }
 ];
 
 const cell = (c: Cell) => {
@@ -51,9 +51,9 @@ export function Comparison() {
           A purpose-built verification oracle, not a generic price feed.
         </h2>
         <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
-          General-purpose oracles tell you the price of a token. Custodial RWA platforms tell you a custodian
-          attests something. AGIsGEM tells you whether the underlying asset is real, current, and finance-ready —
-          with the evidence to back it.
+          General-purpose oracles usually transport external data. Custodial RWA platforms commonly rely on
+          an appointed custodian. AGIsGEM is being developed to organise agricultural evidence, expose gaps
+          and produce a reviewable decision-support output. Pilot capabilities are marked partial until tested.
         </p>
       </div>
 

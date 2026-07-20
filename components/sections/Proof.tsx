@@ -8,12 +8,11 @@ export function ProofPreview() {
         <div>
           <div className="pill mb-4">Proof, Not Promises</div>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
-            Every claim we make ships with a hash.
+            A badge is only as credible as the record behind it.
           </h2>
           <p className="mt-5 text-[color:var(--muted)] leading-relaxed max-w-xl">
-            The AGIsGEM Verification Log is the public record of every pilot, audit, and Logic Score
-            we publish. Each entry references the source data window, methodology version, IPFS proof
-            hash, and any on-chain transaction memo.
+            Every issued “Verified by AGIsGEM” badge must resolve to a current public report status,
+            methodology version, evidence window and limitations. Pilot samples are never labelled verified.
           </p>
           <Link href="/proof" className="btn-secondary mt-6 text-sm">
             Open the Verification Log <ArrowRight size={14} />
@@ -28,9 +27,8 @@ export function ProofPreview() {
             Verified Livestock Contract — Australian Cattle
           </h3>
           <p className="text-sm text-[color:var(--muted)] leading-relaxed">
-            A working pilot built around a real NLIS-traceable cattle contract: provenance scoring,
-            weight & health consistency checks, sale-yard cross-validation, and a published Logic
-            Score PDF anchored to IPFS.
+            A proposed pilot workflow for a livestock contract: evidence mapping, provenance and
+            performance checks, risk flags, a Logic Score explanation and versioned report output.
           </p>
           <div className="mt-5 grid grid-cols-3 gap-3 text-xs">
             <div className="rounded-lg border border-[color:var(--border)] p-3">

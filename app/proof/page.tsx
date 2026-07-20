@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 import { getSupabaseServerClient } from "@/lib/supabase/server";
+import { VerificationBadge } from "@/components/ui/VerificationBadge";
 
 export const metadata = { title: "Proof — Verification Log" };
 export const revalidate = 60;
@@ -37,7 +38,7 @@ export default async function ProofPage() {
       <PageHeader
         eyebrow="Proof"
         title="The Verification Log."
-        description="A public, append-only record of every AGIsGEM pilot, audit, and Logic Score. Each entry references its methodology version, source-data window, IPFS proof hash, and on-chain memo."
+        description="The public status page for issued AGIsGEM reports. A validation badge is meaningful only when its report ID resolves here and the record is current."
       />
       <section className="container-x py-16">
         {logs.length === 0 ? (
@@ -45,10 +46,14 @@ export default async function ProofPage() {
             <div className="pill mb-4 mx-auto w-fit">No published entries yet</div>
             <h2 className="text-2xl font-semibold mb-3">Pilot #001 is in design.</h2>
             <p className="text-[color:var(--muted)] leading-relaxed">
-              We don't publish placeholder proof. The first Verification Log entry will be a real,
-              NLIS-anchored livestock contract — methodology, data window, IPFS hash, and on-chain memo
-              all referenced here. If you want to be the named pilot partner, get in touch.
+              We do not issue a verified badge for a roadmap claim. The first verified record will
+              identify its scope, evidence window, methodology, limitations, issue date and current status.
+              The badge below is deliberately marked as a non-valid pilot sample.
             </p>
+            <div className="mt-6"><VerificationBadge status="pilot" reportId="AGIS-PILOT-SAMPLE" /></div>
+            <a href="/verified-by-agisgem.svg" download className="btn-secondary mt-4 inline-flex">
+              Download badge artwork
+            </a>
             <a href="/contact?type=pilot" className="btn-primary mt-6 inline-flex">
               Become Pilot #001
             </a>
@@ -63,6 +68,7 @@ export default async function ProofPage() {
                   {l.status && <span className="pill">{l.status}</span>}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{l.title}</h3>
+                <div className="mb-4"><VerificationBadge status={l.status === "verified" ? "verified" : l.status === "revoked" ? "revoked" : l.status === "expired" ? "expired" : "pilot"} reportId={l.slug || l.id} /></div>
                 {l.summary && (
                   <p className="text-sm text-[color:var(--muted)] leading-relaxed mb-4">{l.summary}</p>
                 )}

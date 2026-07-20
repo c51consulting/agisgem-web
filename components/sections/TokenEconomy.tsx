@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Coins, Flame, Network } from "lucide-react";
+import { Coins, ShieldCheck, Network } from "lucide-react";
 
 export function TokenEconomy() {
   return (
@@ -11,17 +11,17 @@ export function TokenEconomy() {
             Verification activity → token utility. Not the other way around.
           </h2>
           <p className="mt-5 text-[color:var(--muted)] leading-relaxed">
-            AGIsGEM turns real-world verification work into on-chain economic participation. Audit
-            demand drives protocol usage; protocol usage drives token utility through the Virtuals
-            ecosystem. The token is alignment infrastructure — not a slogan.
+            Commercial verification is the product. The AGISGEM token supports participation and
+            potential future access within the Virtuals agent ecosystem; it does not represent
+            livestock, land, REALM ownership, guaranteed revenue or a promised return.
           </p>
         </div>
 
         <div className="mt-10 grid md:grid-cols-3 gap-4">
           {[
-            { icon: Coins, title: "Audit fees", body: "Pilots and integrations pay protocol fees for Logic Score generation." },
-            { icon: Flame, title: "Buyback & burn", body: "A defined share of fees executes structured buyback events tied to published audits." },
-            { icon: Network, title: "Virtuals-native", body: "Built as a tokenized AI business under Virtuals Protocol's capital formation model." }
+            { icon: Coins, title: "Paid services first", body: "Founding pilots, readiness scans and integrations are separately scoped commercial engagements." },
+            { icon: ShieldCheck, title: "Utility under review", body: "Access, service discounts and agent-to-agent payments require technical delivery and legal review." },
+            { icon: Network, title: "Virtuals-native", body: "AGIsGEM is listed as an agent on Virtuals Protocol on Base." }
           ].map((c) => (
             <div key={c.title} className="card p-6">
               <c.icon size={18} className="text-[color:var(--accent)] mb-3" />
@@ -34,7 +34,7 @@ export function TokenEconomy() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/token" className="btn-secondary text-sm">Token & Virtuals details</Link>
           <a
-            href="https://app.virtuals.io/prototypes/0xf5ae0Ac5Ee87f3aA80984AD2de18de5CBc0b7395"
+            href="https://app.virtuals.io/virtuals/42445"
             target="_blank"
             rel="noreferrer"
             className="btn-secondary text-sm"

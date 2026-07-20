@@ -7,8 +7,8 @@ export default function TokenPage() {
     <>
       <PageHeader
         eyebrow="Token & Virtuals"
-        title="$AGISGEM — alignment infrastructure for a verification network."
-        description="Built within the Virtuals Protocol ecosystem on Base, AGIsGEM is designed as a tokenized AI business where verification demand, product usage, and token utility reinforce each other."
+        title="$AGISGEM — the token supporting the AGIsGEM agent ecosystem."
+        description="AGIsGEM is listed through Virtuals Protocol on Base. Commercial verification is the product; token utility will be introduced only where technically operational and legally reviewed."
       />
       <section className="container-x py-16 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 prose-light">
@@ -16,33 +16,33 @@ export default function TokenPage() {
           <p>
             Virtuals Protocol presents AI agents as tokenized businesses with identity, capital
             formation, and on-chain economic participation. That model fits AGIsGEM: a verification
-            oracle whose value is directly proportional to the volume and quality of audits it produces.
+            agent intended to provide paid verification services to people, platforms and other agents.
           </p>
           <h2>Token utility</h2>
           <ul>
-            <li>Pilots and integrations pay protocol fees for Logic Score generation.</li>
-            <li>A defined share of fees executes structured buyback events tied to published audits.</li>
-            <li>Holders gain access to community signal, governance proposals, and priority pilot waitlist slots.</li>
-            <li>Long-term: revenue-share mechanics for ecosystem contributors via the Virtuals capital-formation model.</li>
+            <li>Potential service discounts or priority access, subject to published terms.</li>
+            <li>Potential payment for agent services where technically and legally supported.</li>
+            <li>Potential participation in non-financial product and dataset priorities.</li>
+            <li>Every utility feature will be labelled planned, pilot or live.</li>
           </ul>
-          <h2>Fee → buyback → burn</h2>
+          <h2>No promised return</h2>
           <p>
-            Verification fees flow through a transparent loop: a portion executes scheduled buyback
-            events on Virtuals, with buybacks tied to <em>published audits</em>, not arbitrary
-            timing. Each buyback event is referenced in the corresponding Verification Log entry.
+            The token does not represent livestock, land, shares in AGIsGEM or REALM, guaranteed
+            platform revenue, a buyback entitlement or a promised return. Token markets are volatile.
+            No person should acquire the token based on an expectation that pilot fees will increase its price.
           </p>
           <h2>Roadmap</h2>
           <ul>
-            <li><strong>Phase 1:</strong> Pilot #001 published. Methodology v0.1 public. X reactivation.</li>
-            <li><strong>Phase 2:</strong> NLIS integration deepening, second and third pilots, first MOU.</li>
+            <li><strong>Phase 1:</strong> Paid founding pilot, methodology v0.1 and redacted sample report.</li>
+            <li><strong>Phase 2:</strong> Approved data integration, second and third paid pilots.</li>
             <li><strong>Phase 3:</strong> Institutional API, carbon module, first ag-lender integration.</li>
             <li><strong>Phase 4:</strong> ACF graduation path inside Virtuals; full agent launch.</li>
           </ul>
-          <h2>Tokenomics transparency</h2>
+          <h2>Transparency commitment</h2>
           <p>
-            The 25% team allocation vests through June 2027. We will publish wallet activity and unlock
-            schedules alongside the Verification Log so the community can audit token-holder dynamics
-            directly.
+            Material allocation, vesting, treasury and utility information will be published only after
+            it is verified against authoritative contract and platform records. Public communications
+            will distinguish working capability from roadmap intentions.
           </p>
         </div>
         <aside className="space-y-4">
@@ -53,7 +53,7 @@ export default function TokenPage() {
           <div className="card p-5">
             <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">Listing</div>
             <a
-              href="https://app.virtuals.io/prototypes/0xf5ae0Ac5Ee87f3aA80984AD2de18de5CBc0b7395"
+              href="https://app.virtuals.io/virtuals/42445"
               target="_blank"
               rel="noreferrer"
               className="font-medium text-[color:var(--accent)]"

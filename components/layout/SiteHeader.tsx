@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const nav = [
+  { href: "/services", label: "Services" },
   { href: "/platform", label: "Platform" },
   { href: "/use-cases", label: "Use Cases" },
   { href: "/proof", label: "Proof" },
@@ -29,7 +30,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <Link href="/contact" className="btn-primary text-sm">
-            Request a pilot
+            Book a pilot
           </Link>
         </div>
       </div>
