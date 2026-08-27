@@ -35,19 +35,14 @@ export function SiteFooter() {
             <li>
               <a href="https://x.com/AGIsGEM" target="_blank" rel="noreferrer">X / @AGIsGEM</a>
             </li>
-            <li>
-              <a href="https://realm360.10web.cloud/agisgem-transforming-livestock-verification-finance/" target="_blank" rel="noreferrer">
-                REALM360 Editorial
-              </a>
-            </li>
           </ul>
         </div>
         <div>
           <div className="text-[color:var(--ink)] font-medium mb-3">Contact</div>
           <ul className="space-y-2 text-[color:var(--muted)]">
             <li>
-              <a href="mailto:realm360@realmgroup.global" className="break-all hover:text-[color:var(--accent)]">
-                realm360@realmgroup.global
+              <a href="mailto:agi@c51consulting.com" className="break-all hover:text-[color:var(--accent)]">
+                agi@c51consulting.com
               </a>
             </li>
             <li>
@@ -62,7 +57,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="container-x py-6 border-t border-[color:var(--border)] flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-xs text-[color:var(--muted)]">
-        <div>© {new Date().getFullYear()} AGIsGEM · A REALM Group Global initiative.</div>
+        <div>© {new Date().getFullYear()} AGIsGEM.</div>
         <div>$AGISGEM on Base · Verification, not speculation.</div>
       </div>
     </footer>

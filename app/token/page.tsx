@@ -27,7 +27,7 @@ export default function TokenPage() {
           </ul>
           <h2>No promised return</h2>
           <p>
-            The token does not represent livestock, land, shares in AGIsGEM or REALM, guaranteed
+            The token does not represent livestock, land, shares in AGIsGEM, guaranteed
             platform revenue, a buyback entitlement or a promised return. Token markets are volatile.
             No person should acquire the token based on an expectation that pilot fees will increase its price.
           </p>

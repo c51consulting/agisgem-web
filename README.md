@@ -1,7 +1,7 @@
 # AGIsGEM — agisgem-web
 
 **The intelligence layer for real-world assets.**
-Built by REALM360 Intelligence on Virtuals Protocol.
+Built on Virtuals Protocol.
 
 This repo is the public marketing + proof site for AGIsGEM at [agisgem.io](https://agisgem.io).
 
@@ -109,4 +109,4 @@ Core taglines:
 
 ## License
 
-© REALM Group Global. All rights reserved.
+© AGIsGEM. All rights reserved.

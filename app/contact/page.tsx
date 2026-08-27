@@ -39,8 +39,8 @@ export default function ContactPage({
         <aside className="space-y-4">
           <div className="card p-5">
             <div className="text-xs uppercase tracking-wider text-[color:var(--muted)] mb-2">Email</div>
-            <a href="mailto:realm360@realmgroup.global" className="font-medium text-[color:var(--accent)] break-all">
-              realm360@realmgroup.global
+            <a href="mailto:agi@c51consulting.com" className="font-medium text-[color:var(--accent)] break-all">
+              agi@c51consulting.com
             </a>
           </div>
           <div className="card p-5">

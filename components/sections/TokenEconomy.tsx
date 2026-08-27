@@ -13,7 +13,7 @@ export function TokenEconomy() {
           <p className="mt-5 text-[color:var(--muted)] leading-relaxed">
             Commercial verification is the product. The AGISGEM token supports participation and
             potential future access within the Virtuals agent ecosystem; it does not represent
-            livestock, land, REALM ownership, guaranteed revenue or a promised return.
+            livestock, land, equity ownership, guaranteed revenue or a promised return.
           </p>
         </div>
 
