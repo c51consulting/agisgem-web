@@ -1,6 +1,5 @@
 export function TrustBar() {
   const items = [
-    { name: "REALM", tag: "Founding use case" },
     { name: "Virtuals Protocol", tag: "Agent ecosystem" },
     { name: "Base", tag: "Token network" },
     { name: "NLIS", tag: "Planned evidence source" },
@@ -13,7 +12,7 @@ export function TrustBar() {
         <div className="text-[11px] uppercase tracking-widest text-[color:var(--muted)] mb-4">
           Pilot architecture · relationships and integrations are labelled by current status
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
           {items.map((i) => (
             <div
               key={i.name}

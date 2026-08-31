@@ -35,7 +35,7 @@ export function Hero() {
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
           {[
-            { value: "001", label: "Founding pilot", sub: "REALM livestock use case" },
+            { value: "001", label: "Founding pilot", sub: "Livestock verification use case" },
             { value: "v0.1", label: "Methodology", sub: "Controlled pilot model" },
             { value: "5 days", label: "Target delivery", sub: "After complete evidence" },
             { value: "Base", label: "Agent network", sub: "via Virtuals Protocol" }

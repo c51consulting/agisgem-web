@@ -20,7 +20,7 @@ const score = await agisgem.score({
     "carbon": { "status": "pending",  "weight": 0.20 }
   },
   "proof_uri": "ipfs://bafy.../pilot-001-v0.1.json",
-  "issued_by": "AGIsGEM · REALM360",
+  "issued_by": "AGIsGEM",
   "chain":     "base"
 }`;
 
