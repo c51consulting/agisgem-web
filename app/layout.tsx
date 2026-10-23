@@ -11,15 +11,15 @@ export const metadata: Metadata = {
     }
   },
   title: {
-    default: "AGIsGEM — The Intelligence Layer for Real-World Assets",
+    default: "AGIsGEM | Evidence Intelligence & Validation",
     template: "%s — AGIsGEM"
   },
   description:
-    "AGIsGEM is building an AI-assisted evidence, risk-scoring and verification layer for livestock and agricultural real-world assets.",
+    "An evidence-based framework for examining claims about technology, AI systems, real-world assets and commercial propositions.",
   openGraph: {
-    title: "AGIsGEM — The Intelligence Layer for Real-World Assets",
+    title: "AGIsGEM | Evidence Intelligence & Validation",
     description:
-      "A controlled verification workflow for agricultural RWAs: evidence registers, risk flags, Logic Scores and versioned reports.",
+      "Examine the evidence behind technologies, assets and commercial claims before relying on them.",
     url: "/",
     siteName: "AGIsGEM",
     type: "website"
@@ -27,15 +27,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@AGIsGEM",
-    title: "AGIsGEM — The Intelligence Layer for Real-World Assets"
+    title: "AGIsGEM | Evidence Intelligence & Validation"
   }
 };
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>

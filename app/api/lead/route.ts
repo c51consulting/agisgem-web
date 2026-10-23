@@ -3,11 +3,15 @@ import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
-const ALLOWED_TYPES = ["pilot", "investor", "partner", "community"] as const;
+const ALLOWED_TYPES = ["pilot", "investor", "partner", "community", "validation", "integration"] as const;
 type LeadType = (typeof ALLOWED_TYPES)[number];
 
 function isEmail(v: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+}
+
+function field(value: unknown, limit = 1000) {
+  return String(value || "").trim().slice(0, limit);
 }
 
 export async function POST(req: Request) {
@@ -18,18 +22,29 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const type = String(body.type || "").trim() as LeadType;
-  const name = String(body.name || "").trim().slice(0, 200);
-  const email = String(body.email || "").trim().slice(0, 320);
-  const organisation = String(body.organisation || "").trim().slice(0, 200);
-  const message = String(body.message || "").trim().slice(0, 4000);
+  const type = field(body.type, 40) as LeadType;
+  const name = field(body.name, 200);
+  const email = field(body.email, 320);
+  const organisation = field(body.organisation, 200);
+  const message = field(body.message, 4000);
+  const sector = field(body.sector, 200);
+  const useCase = field(body.useCase, 1000);
+  const purpose = field(body.purpose, 500);
+  const timeframe = field(body.timeframe, 200);
+  const consent = body.consent === true;
 
-  if (!ALLOWED_TYPES.includes(type)) {
-    return NextResponse.json({ error: "Invalid type" }, { status: 400 });
-  }
-  if (!name || !email || !isEmail(email)) {
-    return NextResponse.json({ error: "Name and a valid email are required" }, { status: 400 });
-  }
+  if (!ALLOWED_TYPES.includes(type)) return NextResponse.json({ error: "Invalid enquiry type" }, { status: 400 });
+  if (!name || !email || !isEmail(email)) return NextResponse.json({ error: "Name and a valid email are required" }, { status: 400 });
+  if (!consent) return NextResponse.json({ error: "Please agree to be contacted about this enquiry" }, { status: 400 });
+
+  const enquiryDetails = [
+    `Sector: ${sector || "Not provided"}`,
+    `Technology, asset or claim: ${useCase || "Not provided"}`,
+    `Purpose: ${purpose || "Not provided"}`,
+    `Preferred timeframe: ${timeframe || "Not provided"}`,
+    "Consent to be contacted: Yes",
+    message ? `Additional context: ${message}` : ""
+  ].filter(Boolean).join("\n").slice(0, 4000);
 
   const supabase = getSupabaseServerClient();
   if (!supabase) {
@@ -42,7 +57,7 @@ export async function POST(req: Request) {
     name,
     email,
     organisation: organisation || null,
-    message: message || null
+    message: enquiryDetails
   });
 
   if (error) {
